@@ -20,6 +20,6 @@ const body = document.querySelector("body"),
             if(body.classList.contains("dark")){
                 modeText.innerText = "Light Mode"
             }else{
-                modeText.innerText = "Dark Mode"
+                modeText.innerText = "Darrk Mode"
             }
         });
