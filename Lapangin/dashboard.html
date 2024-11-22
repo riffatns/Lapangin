@@ -40,13 +40,7 @@
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="#" >
-                                <i class='bx bx-football icon' ></i>
-                                <span class="text nav-text">Field</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#" >
+                            <a href="Notifikasi_booking.html" >
                                 <i class='bx bx-bell icon' ></i>
                                 <span class="text nav-text">Notifications</span>
                             </a>
@@ -64,7 +58,7 @@
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="#" >
+                            <a href="wallet.html" >
                                 <i class='bx bx-wallet icon' ></i>
                                 <span class="text nav-text">Wallets</span>
                             </a>
@@ -125,14 +119,18 @@
                 </select>
             
                 <button class="small-button">⚙</button>
+
             
                 <button>Cari venue</button>
             </div>
 
+            
+
             <div id="product1" class="section-p1">
                 <div class="pro-container">
 
-                    <div class="pro" data-nama="Badminton" data-kota="Dayeuhkolot" data-olahraga="Badminton">
+                    <div class="pro" data-nama="Badminton" data-kota="Dayeuhkolot" data-olahraga="Badminton" >
+                        <a href="GorBadmin.html"></a>
                         <div class="image-container">
                             <img src="gor-badminton.jpg" alt="GOR Badminton Telyu">
                             <div class="location-overlay">
@@ -191,7 +189,23 @@
                     </div>
                 </div>
             </div>
+
+            <div id="modal-filter" class="modal">
+                <div class="modal-content">
+                    <h3>Filter</h3>
+                    <div class="price-filter">
+                        <label for="min-price">Biaya Minimum:</label>
+                        <input type="number" id="min-price" placeholder="Rp.0">
+                    </div>
+                    <div class="price-filter">
+                        <label for="max-price">Biaya Maksimum:</label>
+                        <input type="number" id="max-price" placeholder="Rp.5.000.000+">
+                    </div>
+                    <button id="apply-filter">Terapkan</button>
+                </div>
+            </div>
         </section>
+        <script src="filter.js"></script>
         <script src="search.js"></script>
         <script src="script.js"></script>
 

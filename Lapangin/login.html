@@ -46,7 +46,7 @@
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="#" >
+                            <a href="Notifikasi_booking.html" >
                                 <i class='bx bx-bell icon' ></i>
                                 <span class="text nav-text">Notifications</span>
                             </a>
@@ -64,7 +64,7 @@
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="#" >
+                            <a href="wallet.html" >
                                 <i class='bx bx-wallet icon' ></i>
                                 <span class="text nav-text">Wallets</span>
                             </a>
@@ -134,7 +134,7 @@
     
                     <div class="media-options">
                         <a href="#" class="field google">
-                            <i class="fa-brands fa-google"></i>
+                            <i class='bx bxl-google'></i>
                             <span>Login with Google</span>
                         </a>
                     </div>
@@ -146,35 +146,49 @@
                 <div class="form signup">
                     <div class="form-content">
                         <h1 class="head">Signup</h1>
-                        <form action="#">
+                        <form action="#" id="signup-form">
+                            <!-- Username -->
                             <div class="field input-field">
-                                <input type="text" placeholder="Username" class="input">
+                                <input type="text" name="username" placeholder="Username" class="input" required>
                             </div>
-    
+                
+                            <!-- Email -->
                             <div class="field input-field">
-                                <input type="password" placeholder="Create password" class="password">
+                                <input type="email" name="email" placeholder="Email" class="input" required>
                             </div>
-    
+                
+                            <!-- Nomor HP -->
                             <div class="field input-field">
-                                <input type="password" placeholder="Confirm password" class="password">
+                                <input type="text" name="phone" placeholder="Nomor HP" class="input" required>
+                            </div>
+                
+                            <!-- Password -->
+                            <div class="field input-field">
+                                <input type="password" name="password" placeholder="Create password" class="password" required>
+                            </div>
+                
+                            <!-- Konfirmasi Password -->
+                            <div class="field input-field">
+                                <input type="password" name="confirm_password" placeholder="Confirm password" class="password" required>
                                 <i class='bx bx-hide eye-icon'></i>
                             </div>
-    
+                
+                            <!-- Tombol Submit -->
                             <div class="field button-field">
-                                <button>Signup</button>
+                                <button type="submit">Signup</button>
                             </div>
                         </form>
-    
+                
                         <div class="form-link">
                             <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
                         </div>
                     </div>
-    
+                
                     <div class="line"></div>
-    
+                
                     <div class="media-options">
                         <a href="#" class="field facebook">
-                            <i class='bx bxl-facebook-circle' ></i>
+                            <i class='bx bxl-facebook-circle'></i>
                             <span>Login with Facebook</span>
                         </a>
                         <a href="#" class="field google">
@@ -182,11 +196,7 @@
                             <span>Login with Google</span>
                         </a>
                     </div>
-    
                 </div>
-            </section>
-        </section>
-
         <script src="script.js"></script>
         <script src="log.js"></script>
     </body>
