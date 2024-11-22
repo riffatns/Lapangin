@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Dashboard Sidebar Menu | Dark-Light </title>
+    </head>
+
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="Logo.png" alt="Logo">
+                    </span>
+
+                    <div class="text header-text">
+                        <span class="name">Lapangin</span>
+                        <span class="proffession">Find Field</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class='bx bx-search icon' ></i>
+                            <input type="text" placeholder="Search...">
+                    </li>
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="dashboard.html" >
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Sewa Lapangan</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" >
+                                <i class='bx bx-football icon' ></i>
+                                <span class="text nav-text">Field</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" >
+                                <i class='bx bx-bell icon' ></i>
+                                <span class="text nav-text">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" >
+                                <i class='bx bx-pie-chart-alt icon' ></i>
+                                <span class="text nav-text">History</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" >
+                                <i class='bx bx-heart icon' ></i>
+                                <span class="text nav-text">Likes</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" >
+                                <i class='bx bx-wallet icon' ></i>
+                                <span class="text nav-text">Wallets</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="login.html" >
+                            <i class='bx bx-log-in icon' ></i>
+                            <span class="text nav-text">Login</span>
+                        </a>
+                    </li>
+                    
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-moon icon moon' ></i>
+                            <i class='bx bx-sun icon sun' ></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="logo-section">
+            <h2>Our Website</h2>
+            <p>Booking Lapangan Online</p>
+            <button type="button" id="btn-3"><a href="#"></a> Daftar Vanue</button>
+        </div>
+
+
+        <section class="section-2">
+            <div class="filter-container">
+                <div>
+                    <span class="icon">🔍</span>
+                    <input type="text" placeholder="Cari nama venue">
+                </div>
+            
+                <select>
+                    <option selected>Pilih Kota</option>
+                    <option>Dayeuhkolot</option>
+                    <option>Ciganitri</option>
+                    <option>Baleendah</option>
+                    <option>Kota Bandung</option>
+                </select>
+            
+                <select>
+                    <option selected>Pilih Cabang Olahraga</option>
+                    <option>Tenis</option>
+                    <option>Basket</option>
+                    <option>Futsal</option>
+                    <option>Badminton</option>
+                </select>
+            
+                <button class="small-button">⚙</button>
+            
+                <button>Cari venue</button>
+            </div>
+
+            <div id="product1" class="section-p1">
+                <div class="pro-container">
+
+                    <div class="pro" data-nama="Badminton" data-kota="Dayeuhkolot" data-olahraga="Badminton">
+                        <div class="image-container">
+                            <img src="gor-badminton.jpg" alt="GOR Badminton Telyu">
+                            <div class="location-overlay">
+                                <span><i class="fa-solid fa-location-dot"></i> Kota Bandung</span>
+                            </div>
+                        </div>
+                        <div class="des">
+                            <h5>GOR Badminton Telyu</h5>
+                            <p>⭐ 5.0 (21)</p>
+                            <h4>Mulai Rp 50.000/jam</h4>
+                        </div>
+                    </div>
+            
+
+                    <div class="pro" data-nama="Futsal" data-kota="Kota Bandung" data-olahraga="Futsal">
+                        <div class="image-container">
+                            <img src="gor-badminton.webp" alt="GOR Futsal Telyu">
+                            <div class="location-overlay">
+                                <span><i class="fa-solid fa-location-dot"></i> Kota Bandung</span>
+                            </div>
+                        </div>
+                        <div class="des">
+                            <h5>GOR Futsal Telyu</h5>
+                            <p>⭐ 5.0 (21)</p>
+                            <h4>Mulai Rp 50.000/jam</h4>
+                        </div>
+                    </div>
+            
+                    <div class="pro" data-nama="Tenis" data-kota="Ciganitri" data-olahraga="Tenis">
+                        <div class="image-container">
+                            <img src="gor-tenis.jpeg" alt="Lapangan Tennis Telyu">
+                            <div class="location-overlay">
+                                <span><i class="fa-solid fa-location-dot"></i> Kota Bandung</span>
+                            </div>
+                        </div>
+                        <div class="des">
+                            <h5>Lapangan Tennis Telyu</h5>
+                            <p>⭐ 5.0 (21)</p>
+                            <h4>Mulai Rp 50.000/jam</h4>
+                        </div>
+                    </div>
+            
+
+                    <div class="pro" data-nama="Basket" data-kota="Baleendah" data-olahraga="Basket">
+                        <div class="image-container">
+                            <img src="basket.jpeg" alt="Lapangan Basket Telyu">
+                            <div class="location-overlay">
+                                <span><i class="fa-solid fa-location-dot"></i> Kota Bandung</span>
+                            </div>
+                        </div>
+                        <div class="des">
+                            <h5>Lapangan Basket Telyu</h5>
+                            <p>⭐ 5.0 (21)</p>
+                            <h4>Mulai Rp 50.000/jam</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="search.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
