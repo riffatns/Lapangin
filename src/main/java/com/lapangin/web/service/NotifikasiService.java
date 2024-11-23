@@ -1,7 +1,7 @@
 package com.lapangin.web.service;
 
-import com.bookinglapangan.model.Notifikasi;
-import com.bookinglapangan.repository.NotifikasiRepository;
+import com.lapangin.web.model.Notifikasi;
+import com.lapangin.web.repository.NotifikasiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

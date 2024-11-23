@@ -16,5 +16,9 @@ public class Notifikasi {
     private Date waktuNotifikasi;
     private boolean statusTerkirim;
 
+    public void setStatusTerkirim(boolean b) {
+
+    }
+
     // Getter & Setter
 }

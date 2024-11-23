@@ -18,5 +18,9 @@ public class Promo {
     @Temporal(TemporalType.DATE)
     private Date tanggalSelesai;
 
+    public int getDiskonPersen() {
+        return (int)diskonPersen/100;
+    }
+
     // Getter & Setter
 }

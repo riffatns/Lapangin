@@ -1,7 +1,7 @@
 package com.lapangin.web.service;
 
-import com.bookinglapangan.model.Lapangan;
-import com.bookinglapangan.repository.LapanganRepository;
+import com.lapangin.web.model.Lapangan;
+import com.lapangin.web.repository.LapanganRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

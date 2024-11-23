@@ -26,5 +26,67 @@ public class Pesanan {
     @JoinColumn(name = "promoID")
     private Promo promo;
 
-    // Getter & Setter
+    public Lapangan getLapangan() {
+        return lapangan;
+    }
+
+    public int getJamSelesai() {
+        return jamSelesai;
+    }
+
+    public int getJamMulai() {
+        return jamMulai;
+    }
+
+    public Promo getPromo() {
+        return promo;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public Date getTanggalPesan() {
+        return tanggalPesan;
+    }
+
+    public double getTotalHarga() {
+        return totalHarga;
+    }
+
+    public int getPesananID() {
+        return pesananID;
+    }
+
+    public void setLapangan(Lapangan lapangan) {
+        this.lapangan = lapangan;
+    }
+
+    public void setJamSelesai(int jamSelesai) {
+        this.jamSelesai = jamSelesai;
+    }
+
+    public void setJamMulai(int jamMulai) {
+        this.jamMulai = jamMulai;
+    }
+
+    public void setPromo(Promo promo) {
+        this.promo = promo;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public void setTanggalPesan(Date tanggalPesan) {
+        this.tanggalPesan = tanggalPesan;
+    }
+
+    public void setTotalHarga(double totalHarga) {
+        this.totalHarga = totalHarga;
+    }
+
+    public void setPesananID(int pesananID) {
+        this.pesananID = pesananID;
+    }
 }

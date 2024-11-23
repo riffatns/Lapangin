@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Daftar Suka</title>
+    </head>
+
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="Logo.png" alt="Logo">
+                    </span>
+
+                    <div class="text header-text">
+                        <span class="name">Lapangin</span>
+                        <span class="proffession">Find Field</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class='bx bx-search icon' ></i>
+                            <input type="text" placeholder="Search...">
+                    </li>
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="dashboard.html" >
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Sewa Lapangan</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="Notifikasi_booking.html" >
+                                <i class='bx bx-bell icon' ></i>
+                                <span class="text nav-text">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" >
+                                <i class='bx bx-pie-chart-alt icon' ></i>
+                                <span class="text nav-text">History</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" >
+                                <i class='bx bx-heart icon' ></i>
+                                <span class="text nav-text">Likes</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="wallet.html" >
+                                <i class='bx bx-wallet icon' ></i>
+                                <span class="text nav-text">Wallets</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="login.html" >
+                            <i class='bx bx-log-in icon' ></i>
+                            <span class="text nav-text">Login</span>
+                        </a>
+                    </li>
+                    
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-moon icon moon' ></i>
+                            <i class='bx bx-sun icon sun' ></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+    
+        <div id="liked-lapangan-container">
+            <h1>Lapangan yang Disukai</h1>
+        </div>
+
+        <script>
+            // Ambil data lapangan yang disukai dari Local Storage
+            const likedLapangan = JSON.parse(localStorage.getItem('likedLapangan')) || [];
+            const container = document.getElementById('liked-lapangan-container');
+        
+            // Tampilkan data lapangan yang disukai
+            if (likedLapangan.length > 0) {
+                likedLapangan.forEach((lapangan) => {
+                    const lapanganDiv = document.createElement('div');
+                    lapanganDiv.classList.add('pro');
+        
+                    lapanganDiv.innerHTML = `
+                        <div class="image-container">
+                            <img src="${lapangan.imageSrc}" alt="${lapangan.nama}">
+                            <i class='bx bx-heart icon like-btn'></i>
+                        </div>
+                        <div class="des">
+                            <h5>${lapangan.nama}</h5>
+                            <p>${lapangan.kota}</p>
+                            <h4>${lapangan.olahraga}</h4>
+                        </div>
+                    `;
+                    container.appendChild(lapanganDiv);
+                });
+            } else {
+                container.innerHTML = '<p>Tidak ada lapangan yang disukai.</p>';
+            }
+        </script>
+
+    </body>
+</html>

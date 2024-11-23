@@ -1,9 +1,9 @@
 package com.lapangin.web.service;
 
-import com.bookinglapangan.model.Customer;
-import com.bookinglapangan.model.Pesanan;
-import com.bookinglapangan.repository.CustomerRepository;
-import com.bookinglapangan.repository.PesananRepository;
+import com.lapangin.web.model.Customer;
+import com.lapangin.web.model.Pesanan;
+import com.lapangin.web.repository.CustomerRepository;
+import com.lapangin.web.repository.PesananRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
