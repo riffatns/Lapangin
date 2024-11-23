@@ -37,7 +37,15 @@ document.getElementById("login-form").addEventListener("submit", e => {
         return;
     }
 
-    alert("Login berhasil (contoh, tambahkan proses autentikasi)");
+    // Periksa apakah data sesuai (contoh, gunakan server atau localStorage)
+    const storedUser = JSON.parse(localStorage.getItem("userData"));
+    if (storedUser && storedUser.username === username && storedUser.password === password) {
+        alert("Login berhasil!");
+    } else {
+        alert("Akun tidak ditemukan! Silakan daftar terlebih dahulu.");
+        // Alihkan ke formulir signup
+        forms.classList.add("show-signup");
+    }
 });
 
 // Validasi signup
@@ -54,12 +62,21 @@ document.getElementById("signup-form").addEventListener("submit", e => {
         return;
     }
 
-    console.log({
+    // Simpan data ke localStorage (atau kirim ke server)
+    const userData = {
         username,
         email,
         phone,
         password,
-    });
+    };
+    localStorage.setItem("userData", JSON.stringify(userData));
 
     alert("Registrasi berhasil!");
+
+    // Isi otomatis form login dan alihkan
+    document.getElementById("login-username").value = username;
+    document.getElementById("login-password").value = password;
+
+    // Kembali ke formulir login
+    forms.classList.remove("show-signup");
 });
