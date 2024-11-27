@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class PromoService {
@@ -13,8 +14,13 @@ public class PromoService {
     @Autowired
     private PromoRepository promoRepository;
 
-    public Promo getActivePromo() {
-        Date now = new Date();
-        return promoRepository.findByTanggalMulaiBeforeAndTanggalSelesaiAfter(now);
+    /**
+     * Mengambil semua promo yang aktif di antara tanggal tertentu.
+     * @param startDate tanggal mulai (awal range)
+     * @param endDate   tanggal akhir (akhir range)
+     * @return Daftar promo yang aktif
+     */
+    public List<Promo> getActivePromos(Date startDate, Date endDate) {
+        return promoRepository.findByTanggalMulaiBeforeAndTanggalSelesaiAfter(startDate, endDate);
     }
 }
